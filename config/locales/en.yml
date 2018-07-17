@@ -1,4 +1,54 @@
 en:
-  views:
-    layouts:
+  layouts:
+    application:
       name_app: "TastyBunny"
+    header:
+      about: "About"
+      contact: "Contact us"
+      name_app: "TastyBunny"
+      search: "Search"
+    footer:
+      about: "About us"
+      address: "Ha Noi, Viet Nam"
+      contact: "Contact"
+      coppy: "© Copyright 2017 Pingendo - All rights reserved."
+      home: "home"
+      label: "Get our newsletter"
+      mail: "pham.thi.thu.phuong@framgia.com"
+      map: "Mapsite"
+      name_app: "TastyBunny"
+      name_store: "Food Store"
+      phone: "01695779469"
+      place_holder: "Enter email"
+      services: "Our services"
+      story: "Stories"
+      subcribe: "Subcribe"
+      submit: "Submit"
+  static_pages:
+    home:
+      comment1: "Đây là một quán bán đồ ăn tuyệt vời"
+      des_peo1: "Senior developer"
+      des_peo2: "UI designer"
+      des_peo3: "Boss"
+      lead: "We grow together with the community"
+      login: "Login"
+      peo1: "Meow"
+      peo2: "J. L. Fish"
+      peo3: "Carlito"
+      quotes: "Food should be blank as hell, strong as death and sweet as love"
+      review: "Review"
+      signup: "Signup"
+      slogan: "Simply Tasty, Simply Better"
+    contact:
+      contact_us: "Contact us"
+      email: "Email address"
+      enter_ameil: "Enter Email"
+      input_email: "InputEmail"
+      input_name: "InputName"
+      name: "Your name"
+      quotes: "We would love to hear from you"
+      submit: "Submit"
+      type_here: "Type here"
+      write: "Write here"
+      your_email: "Your Email"
+      your_name: "Your Name"

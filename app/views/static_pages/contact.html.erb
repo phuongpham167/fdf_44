@@ -1,0 +1,28 @@
+<div class="py-5 bg-primary text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><%=  t ".contact_us" %></h1>
+      </div>
+      <div class="col-md-6">
+        <h1><%= t ".contact_us" %></h1>
+        <p><%= t ".quotes" %></p>
+        <form>
+          <div class="form-group">
+            <label for="InputName"><%= t ".name" %></label>
+            <input type="text" class="form-control" id="InputName" placeholder= "<%= t ".your_name" %>">
+          </div>
+          <div class="form-group">
+            <label for="InputEmail1"><%= t ".email" %></label>
+            <input type="email" class="form-control" id="InputEmail1" placeholder= "<%= t ".your_email" %>">
+          </div>
+          <div class="form-group">
+            <label for="Textarea"><%= t ".write" %></label>
+            <textarea class="form-control" id="Textarea" rows="3" placeholder= "<%= t ".type_here" %>"></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary"><%= t ".submit" %></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
