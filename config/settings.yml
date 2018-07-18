@@ -20,3 +20,5 @@ user:
 cart:
   add_cart: 1
   verify_delete_cart: 1
+rating:
+  default: 0  

@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.float :price
       t.text :descriptions
       t.references :category, foreign_key: true
-      t.integer :average_point
+      t.float :average_point
 
       t.timestamps
     end
