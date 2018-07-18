@@ -18,4 +18,8 @@ class Product < ApplicationRecord
   def new_product?
     created_at >= Settings.product_time_new.hours.ago
   end
+
+  def self.ransackable_attributes(auth_object = nil)
+    super & %w(name price average_point)
+  end
 end

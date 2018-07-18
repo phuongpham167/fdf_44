@@ -5,15 +5,11 @@
       <li class="nav-item">
         <%= link_to t(".contact"), contact_path, class: "nav-link" %>
       </li>
-      <li class="nav-item search" id="searchForm">
-        <div class="input-group">
-          <input type="text" class="form-control" id="inlineFormInputGroup"
-            placeholder="<%= t ".search" %>">
-          <div class="input-group-prepend">
-            <a class="btn btn-light input-group-text" href="#"><%= t".light" %></a>
-          </div>
-        </div>
-      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item search" id="searchForm">
+          <%= render "shared/form_search" %>
+        </li>
+      <% end %>
     </ul>
     <div class="collapse navbar-collapse text-center justify-content-end" id="navbarSecondarySupportedContent">
       <div class="text-center">

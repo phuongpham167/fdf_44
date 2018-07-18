@@ -1,0 +1,9 @@
+<%= search_form_for @q do |f| %>
+  <div class="input-group">
+    <%= f.search_field :name_cont, class: "form-control", 
+      id: "inlineFormInputGroup", placeholder: t(".search") %>
+    <div class="input-group-prepend">
+      <%= f.submit t(".light"), class: "btn btn-light input-group-text"%>
+    </div>
+  </div>
+<% end %>
