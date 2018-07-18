@@ -47,7 +47,24 @@
       <br>
       <h6 class="mb-0"><%= t(".price")%>: <%= @product.price.to_s + " " + t(:money).html_safe  %></h6>
       <br>
-      <h6 class="mb-0"><%= t(".rating")%>: <%= @product.average_point %></h6>
+      <h6 class="mb-0">
+        <%= t ".people_rating:" %>  
+        <%= @product.rates("rating").count %>
+      </h6>
+      <br>
+      <h6 class="mb-0">
+        <%= t(".rating") %>
+        <%= rating_for @product, "rating", star: 5, disable_after_rate: false %>
+      </h6>
+      <br>
+      <% if @product.rates %>
+        <h6 class="mb-0">
+          <div class="hidden">
+            <%= load_rating %>
+          <div>  
+        </h6> 
+      <% end %>
+      <br>
       <div class="btn-group mg-t-l">
         <a href="#" class="btn btn-primary"><%= t ".book_mark" %></a>
         <a href="#" class="btn btn-primary"><%= t ".cart" %></a>

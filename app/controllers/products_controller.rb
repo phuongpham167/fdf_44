@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     index
     render :index
   end
-
+  
   private
 
   def load_product
