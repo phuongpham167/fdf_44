@@ -3,4 +3,7 @@ class User < ApplicationRecord
   has_many :favourites, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :product_temps
+
+  devise :database_authenticatable, :registerable,
+    :recoverable, :rememberable, :trackable, :validatable
 end

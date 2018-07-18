@@ -10,6 +10,11 @@
         <li class="nav-item">
           <%= link_to t(".contact"), contact_path %>
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to t(".log_out"), destroy_user_session_path, method: :delete %>
+          </li>
+        <% end %>
       </ul>
       <form class="form-inline m-0">
         <input class="form-control mr-2" type="text" placeholder="<%= t ".search"%>">
