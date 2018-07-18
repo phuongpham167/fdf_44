@@ -9,6 +9,10 @@ class Product < ApplicationRecord
   validates :name, :price, :descriptions, presence: true
 
   scope :order_by_name, -> { order name: :asc}
+  scope :order_by_time, (lambda do
+    where("created_at >= ?", Settings.product_time_new.days.ago)
+    .order("created_at desc")
+  end)
 
   def new_product?
     created_at >= Settings.product_time_new.hours.ago
