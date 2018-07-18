@@ -1,6 +1,14 @@
 ratings:
   point: 1..5
-user:
   password_min: 0
   password_max: 20
   per_page: 15
+  password_max: 
+product_time_new: 3
+product_per_page: 8
+sort_descriptions: 75
+picture:
+  size: 5
+  size_fit: 400
+  type: "image/jpeg,image/gif,image/png"
+  default: "default.png"
