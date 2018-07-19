@@ -39,7 +39,7 @@
                     <div class="or"></div>
                     <a href="#" class="login-with-fb">
                       <span class="icon fa fa-facebook"></span>
-                      <%= t ".login_with_fb" %>
+                      <%= link_to t(".login_with_fb"), user_facebook_omniauth_authorize_path %>
                     </a>
                   <% end %>
                 </div>
