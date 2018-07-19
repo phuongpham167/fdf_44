@@ -1,2 +1,5 @@
 ratings:
   point: 1..5
+user:
+  password_min: 0
+  password_max: 20
