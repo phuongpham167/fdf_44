@@ -14,11 +14,14 @@ gem "devise"
 gem "faker", "1.7.3"
 gem "jbuilder", "2.7.0"
 gem "jquery-rails", "4.3.1"
+gem "kaminari"
 gem "puma", "3.9.1"
 gem "rails", "5.1.4"
 gem "sass-rails", "5.0.6"
 gem "turbolinks", "5.0.1"
 gem "uglifier", "3.2.0"
+gem "omniauth"
+gem "omniauth-facebook", "4.0.0"
 
 group :development, :test do
   gem "byebug", "9.0.6", platform: :mri

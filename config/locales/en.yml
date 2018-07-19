@@ -1,13 +1,40 @@
 en:
+  admin:
+    danger: "Admin only"
+    users:
+      success: "Create success"
+      danger: "Create failed"
+      form:
+        create: "Create"
+      index:
+        new_user: "New user?"
+        all_users: "All users"
+        name: "Name"
+        email: "Email"
+        role: "Role"
+        admin: "Admin"
+        user: "User"
+      new:
+        new: "Create New User"
+    load_user:
+      danger: "No user"
   layouts:
     application:
       name_app: "TastyBunny"
+    admin:
+      name_app: "TastyBunny"
+    admin_header:
+      name_app: "TastyBunny"
+      contact: "Contact"
+      log_out: "Log out"
+      search: "Search"
     header:
       about: "About"
       contact: "Contact us"
       name_app: "TastyBunny"
       log_out: "Log out"
       search: "Search"
+      manage: "Manage"
     footer:
       about: "About us"
       address: "Ha Noi, Viet Nam"
