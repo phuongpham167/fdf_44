@@ -87,3 +87,10 @@ en:
       write: "Write here"
       your_email: "Your Email"
       your_name: "Your Name"
+  products:
+    product:
+      new: "new"
+      cart: "Cart"
+      favourite: "Favourite"
+      rating: "Rating: "
+      read_more: "more"  
