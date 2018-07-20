@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :product_temps
 
+  enum role: [:member, :admin]
+
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, :omniauth_providers => [:facebook]

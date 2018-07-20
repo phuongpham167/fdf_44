@@ -1,0 +1,21 @@
+<%= form_for [:admin, @user] do |f| %>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :email, class: "col-md-3" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :password, class: "col-md-3" %>
+      <%= f.password_field :password, autocomplete: "off", autofocus: true %>
+    </div>
+  </div>
+   <div class="form-group">
+    <div class="input-group">
+      <%= f.label :password, class: "col-md-3" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", autofocus: true %>
+    </div>
+  </div>
+  <%= f.submit t(".create"), class: "btn" %>
+<% end %>

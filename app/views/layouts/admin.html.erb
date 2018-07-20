@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t ".name_app" %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= render "layouts/shim" %>
+  </head>
+
+  <body>
+    <%= render "layouts/admin_header"  %>
+    <div class="container-fluid" id="container-admin">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render "layouts/footer" %>
+  </body>
+</html>
