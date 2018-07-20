@@ -18,6 +18,36 @@ en:
         new: "Create New User"
     load_user:
       danger: "No user"
+    products:
+      create:
+        success: "Create success"
+        error: "Create fail"
+      edit:
+        descri: "Edit product"
+      form:
+        name: "Name product"
+        describe: "Descibes"
+        price: "Price"
+        submit: "Submit"
+      delete:
+        success: "Delete success"
+        danger: "Delete not success. Pls try again"
+      index:
+        descri: "All products"
+        new: "Add new product"
+      new:
+        descri: "New product"
+      update:
+        success: "Update success"
+        danger: "Update fail"
+      load_product:
+        danger: "Product not found"
+      product:
+        read_more: "Read more"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+        rating: "Rating"
   layouts:
     application:
       name_app: "TastyBunny"
@@ -87,3 +117,10 @@ en:
       write: "Write here"
       your_email: "Your Email"
       your_name: "Your Name"
+  products:
+    product:
+      new: "new"
+      cart: "Cart"
+      favourite: "Favourite"
+      rating: "Rating: "
+      read_more: "more"

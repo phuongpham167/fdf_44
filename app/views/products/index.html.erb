@@ -1,0 +1,17 @@
+<div class="py-3 container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-primary filterable">
+        <div class="list-group-item panel-heading bg-primary">
+          <div class="panel-title">All products</div>
+        </div>
+        <div class="container">
+          <%= render partial: "product", collection: @products, as: :product %>
+        </div>
+        <div class="paginate">
+          <%= paginate @products %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

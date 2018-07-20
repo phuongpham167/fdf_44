@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
 
   root "static_pages#home"
+  resources :products, only: %i(index show)
 end
