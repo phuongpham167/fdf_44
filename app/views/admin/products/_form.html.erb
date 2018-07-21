@@ -1,0 +1,28 @@
+<%= form_for [:admin, @product] do |f| %>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :name, class: "col-md-3" %>
+      <%= f.text_field :name, class: "form-control", placeholder: t(".name") %>
+   </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :descriptions, class: "col-md-3" %>
+      <%= f.text_area :descriptions, class: "form-control", placeholder: t(".describe") %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :price, class: "col-md-3" %>
+      <%= f.text_field :price, class: "form-control", placeholder: t(".price") %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :category, class: "col-md-3" %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {}, class: "form-control" %>
+    </div>
+  </div>
+  <br>
+  <%= f.submit t(".submit"), class: "btn" %>
+<% end %>

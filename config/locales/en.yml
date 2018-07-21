@@ -1,5 +1,40 @@
 en:
   admin:
+    categories:
+      create:
+        success: "Create success"
+        fail: "Create failed"
+      destroy:
+        success: "Delete success"
+        danger: "Delete failed"
+        warning: "Can not delete this Category"
+      form:
+        submit: "Submit"
+      edit:
+        title: "Edit category"
+      index:
+        categories: "Categories"
+        new: "New category"
+        product: "Product"
+        price: "Price"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      load_category:
+        danger: "Category not found"
+      new:
+        new_category: "New Category"
+      update:
+        success: "Update success"
+      show:
+        confirm: "Are you sure?"
+        describe_title: "Category describe: "
+        describe_content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        edit: "Edit this category"
+        delete: "Delete this category"
+        product_of: "Product of"
+        name: "Name"
+        price: "Price"
     danger: "Admin only"
     users:
       success: "Create success"
@@ -18,6 +53,37 @@ en:
         new: "Create New User"
     load_user:
       danger: "No user"
+    products:
+      create:
+        success: "Create success"
+        error: "Create fail"
+      edit:
+        describes: "Edit product"
+      form:
+        name: "Name product"
+        describe: "Descibes"
+        price: "Price"
+        submit: "Submit"
+      delete:
+        success: "Delete success"
+        danger: "Delete not success. Pls try again"
+      index:
+        describes: "All products"
+        new: "Add new product"
+      new:
+        describes: "New product"
+      update:
+        success: "Update success"
+        danger: "Update fail"
+      load_product:
+        danger: "Product not found"
+      product:
+        read_more: "Read more"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+        rating: "Rating"
+        star: "/5"
   layouts:
     application:
       name_app: "TastyBunny"
@@ -28,6 +94,9 @@ en:
       contact: "Contact"
       log_out: "Log out"
       search: "Search"
+      users: "Users"
+      categories: "Categories"
+      products: "Products"
     header:
       about: "About"
       contact: "Contact us"
@@ -93,4 +162,5 @@ en:
       cart: "Cart"
       favourite: "Favourite"
       rating: "Rating: "
-      read_more: "more"  
+      read_more: "more"
+      star: "/5"

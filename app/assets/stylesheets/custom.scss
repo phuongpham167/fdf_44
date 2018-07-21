@@ -1,7 +1,10 @@
-div.banner{
+.container-fluid{
+  min-height: 700px;
+}
+.banner{
   background-image: url("banner.jpg");
 }
-div.ahihi{
+.ahihi{
   max-height: 600px;
   min-width: 600px;
   padding-left: 60px;
