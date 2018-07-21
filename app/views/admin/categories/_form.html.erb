@@ -1,0 +1,9 @@
+<%= form_for [:admin, @category] do |f| %>
+  <div class="form-group">
+    <div class="input-group">
+      <%= f.label :name, class: "col-md-3" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+  <%= f.submit t(".submit"), class: "btn" %>
+<% end %>

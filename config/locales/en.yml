@@ -1,5 +1,37 @@
 en:
   admin:
+    categories:
+      create:
+        success: "Create success"
+        fail: "Create failed"
+      destroy:
+        success: "Delete success"
+        danger: "Delete failed"
+        warning: "Can not delete this Category"
+      form:
+        submit: "Submit"
+      edit:
+        title: "Edit category"
+      index:
+        categories: "Categories"
+        new: "New category"
+        product: "Product"
+        price: "Price"
+      load_category:
+        danger: "Category not found"
+      new:
+        new_category: "New Category"
+      update:
+        success: "Update success"
+      show:
+        confirm: "Are you sure?"
+        describe_title: "Category describe: "
+        describe_content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        edit: "Edit this category"
+        delete: "Delete this category"
+        product_of: "Product of"
+        name: "Name"
+        price: "Price"
     danger: "Admin only"
     users:
       success: "Create success"
@@ -28,6 +60,8 @@ en:
       contact: "Contact"
       log_out: "Log out"
       search: "Search"
+      users: "Users"
+      categories: "Categories"
     header:
       about: "About"
       contact: "Contact us"
@@ -93,4 +127,4 @@ en:
       cart: "Cart"
       favourite: "Favourite"
       rating: "Rating: "
-      read_more: "more"  
+      read_more: "more"
