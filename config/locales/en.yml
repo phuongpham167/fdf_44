@@ -17,6 +17,9 @@ en:
         new: "New category"
         product: "Product"
         price: "Price"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
       load_category:
         danger: "Category not found"
       new:
@@ -50,6 +53,37 @@ en:
         new: "Create New User"
     load_user:
       danger: "No user"
+    products:
+      create:
+        success: "Create success"
+        error: "Create fail"
+      edit:
+        describes: "Edit product"
+      form:
+        name: "Name product"
+        describe: "Descibes"
+        price: "Price"
+        submit: "Submit"
+      delete:
+        success: "Delete success"
+        danger: "Delete not success. Pls try again"
+      index:
+        describes: "All products"
+        new: "Add new product"
+      new:
+        describes: "New product"
+      update:
+        success: "Update success"
+        danger: "Update fail"
+      load_product:
+        danger: "Product not found"
+      product:
+        read_more: "Read more"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+        rating: "Rating"
+        star: "/5"
   money: "₫"
   layouts:
     application:
@@ -133,4 +167,4 @@ en:
   shared:
     form_login:
       login: "Login"
-      signup: "Sign Up"    
+      signup: "Sign Up"
