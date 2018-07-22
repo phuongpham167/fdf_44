@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include CartsHelper
   protect_from_forgery with: :exception
 
   def not_found
