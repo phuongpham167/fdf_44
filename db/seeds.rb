@@ -12,3 +12,6 @@ end
   Product.create!(name: name, price: price, descriptions: descriptions, 
     category_id: category_id, average_point: average_point)
 end
+
+Product.all.each { |product| 
+  product.images.create! image_link: Faker::Avatar.image(slug = nil, size = '730x411', format = 'png', bgset = true)}

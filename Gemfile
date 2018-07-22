@@ -7,7 +7,6 @@ end
 
 gem "bcrypt"
 gem "bootstrap"
-gem "bootstrap-sass", "3.3.7"
 gem "coffee-rails", "4.2.2"
 gem "config"
 gem "devise"

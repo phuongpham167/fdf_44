@@ -1,6 +1,17 @@
 <div class="container">
+  <div class="col-12 mg-t text-center">
+    <h2><%= t ".product" %></h2>
+    <hr>
+  </div>
   <%= render partial: "product", collection: @products, as: :product %>
 </div>
 <div class="paginate">
   <%= paginate @products %>
+</div>
+<div class="container">
+  <div class="col-12 mg-t text-center">
+    <h2><%= t ".product_new" %></h2>
+    <hr>
+  </div>
+  <%= render partial: "product", collection: @products_new, as: :product %>
 </div>

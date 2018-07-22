@@ -50,6 +50,7 @@ en:
         new: "Create New User"
     load_user:
       danger: "No user"
+  money: "₫"
   layouts:
     application:
       name_app: "TastyBunny"
@@ -127,4 +128,9 @@ en:
       cart: "Cart"
       favourite: "Favourite"
       rating: "Rating: "
-      read_more: "more"
+      read_more: "Read more"
+      no_descriptions: "No descriptions"
+  shared:
+    form_login:
+      login: "Login"
+      signup: "Sign Up"    

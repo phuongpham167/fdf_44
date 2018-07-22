@@ -1,0 +1,72 @@
+<div class="py-5 text-center banner">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="display-3 mb-4 text-primary"><%= t ".slogan" %></h1>
+        <p class="lead mb-5"><%= t ".quotes" %></p>
+        <a class="btn btn-lg mx-1 btn-secondary" data-toggle="modal" data-target="#myModal"><%= t ".login" %></a>
+        <a class="btn btn-lg btn-primary mx-1" data-toggle="modal" data-target="#myModal"><%= t ".signup" %></a>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content ahihi">
+              <div class="login-signup l-attop" id="login">
+                <div class="login-signup-title">
+                  <%= t ".login" %>
+                </div>
+                <div class="login-signup-content">
+                  <%= form_for("user", url: user_session_path) do |f| %>
+                    <div class="input-name">
+                      <%= f.label :email %><br />
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                    </div>
+                    <div class="input-name input-margin">
+                      <%= f.label :password %><br />
+                      <%= f.password_field :password, autocomplete: "off" %>
+                    </div>
+                    <div class="input-r">
+                      <div class="check-input">
+                        <%= f.check_box :remember_me %>
+                      </div>
+                      <div class="rememberme"><label for="remember-me-2"><%= t ".remember" %></label></div>
+                    </div>
+                    <%= f.submit t(".login") %>
+                    <div class="forgot-pass">
+                      <a href="#"><%= t ".foget" %></a>
+                    </div>
+                    <div class="or"></div>
+                    <a href="#" class="login-with-fb">
+                      <span class="icon fa fa-facebook"></span>
+                      <%= link_to t(".login_with_fb"), user_facebook_omniauth_authorize_path %>
+                    </a>
+                  <% end %>
+                </div>
+              </div>
+              <div class="login-signup s-atbottom" id="signup">
+                <div class="login-signup-title">
+                  <%= t ".signup" %>
+                </div>
+                <div class="login-signup-content">
+                  <%= form_for("user", url: user_registration_path) do |f| %>
+                    <div class="input-name">
+                      <h2><%= t ".email" %></h2>
+                       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                    </div>
+                    <div class="input-name input-margin">
+                       <h2><%= t ".password" %></h2>
+                       <%= f.password_field :password, autocomplete: "off" %>
+                    </div>
+                    <div class="input-name input-margin">
+                      <h2><%= t ".password_cf" %></h2>
+                      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                    </div>
+                    <%= f.submit t(".signup") %>
+                  <% end %>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
