@@ -13,6 +13,7 @@ class Product < ApplicationRecord
     where("created_at >= ?", Settings.product_time_new.days.ago)
     .order("created_at desc")
   end)
+  scope :load_product, -> product_ids {where id: product_ids}
 
   def new_product?
     created_at >= Settings.product_time_new.hours.ago
