@@ -7,7 +7,7 @@
       </li>
       <li class="nav-item search" id="searchForm">
         <div class="input-group">
-          <input type="text" class="form-control" id="inlineFormInputGroup" 
+          <input type="text" class="form-control" id="inlineFormInputGroup"
             placeholder="<%= t ".search" %>">
           <div class="input-group-prepend">
             <a class="btn btn-light input-group-text" href="#"><%= t".light" %></a>
@@ -16,6 +16,9 @@
       </li>
     </ul>
     <div class="collapse navbar-collapse text-center justify-content-end" id="navbarSecondarySupportedContent">
+      <div class="text-center">
+        <a href="<%= carts_path %>"><i class="fa fa-shopping-cart"></i><%= t ".cart" %></span></a>
+      </div>
       <%= show_nav_user %>
     </div>
   </div>

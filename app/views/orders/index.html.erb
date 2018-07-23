@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>Manage Orders</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th><%= t ".no_number" %></th>
+          <th><%= t ".receiver" %></th>
+          <th><%= t ".address" %></th>
+          <th><%= t ".phone" %></th>
+          <th><%= t ".date" %></th>
+          <th><%= t ".status" %></th>
+          <th><%= t ".total" %></th>
+          <th><%= t ".action" %></th>
+        </tr>
+      </thead>
+      <tbody id="orders">
+        <%= render @orders %>
+        <%= will_paginate %>
+      </tbody>
+    </table>
+  </div>
+</div>

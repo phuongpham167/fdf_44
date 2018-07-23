@@ -1,0 +1,38 @@
+<div class="row order">
+  <div class="col-md-6 order-form">
+    <%= render "form" %>
+  </div>
+  <div class="col-md-6 list-orderdetails">
+    <div class="row">
+      <h2 class="form-control">Bill</h2>
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @products_in_cart.each do |product| %>
+              <tr>
+                <td><%= product.name %></td>
+                <td><%= session[:cart][product.id.to_s] %></td>
+                <td><%= sub_product_price(product) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Total Money</td>
+              <td></td>
+              <td><%= sum_total_price %></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <%= link_to "Back to cart", carts_path, class: "btn btn-warning" %>
+  </div>
+</div>

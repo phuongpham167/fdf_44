@@ -84,6 +84,21 @@ en:
         confirm: "Are you sure?"
         rating: "Rating"
         star: "/5"
+  carts:
+    load_product_in_cart:
+      danger: "Please choose product"
+    index:
+      product: "Product"
+      image: "Image"
+      price: "Price"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      remove: "Remove"
+      continue: "Add Product"
+      total: "Total Money"
+      order: "Order"
+      add: "+"
+      delete: "-"
   money: "₫"
   layouts:
     application:
@@ -104,6 +119,7 @@ en:
       log_out: "Log out"
       search: "Search"
       manage: "Manage"
+      cart: "Cart"
     footer:
       about: "About us"
       address: "Ha Noi, Viet Nam"

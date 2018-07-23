@@ -17,3 +17,6 @@ user:
   password_min: 0
   password_max: 20
   per_page: 15
+cart:
+  add_cart: 1
+  verify_delete_cart: 1
