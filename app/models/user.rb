@@ -6,9 +6,11 @@ class User < ApplicationRecord
 
   enum role: [:member, :admin]
 
+  mount_uploader :avatar, AvatarUploader
+
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable,
-    :omniauthable, :omniauth_providers => [:facebook]
+    :omniauthable, omniauth_providers: [:facebook]
 
   def self.new_with_session params, session
     super.tap do |user|
