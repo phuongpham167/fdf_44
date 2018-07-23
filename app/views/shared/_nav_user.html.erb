@@ -7,6 +7,9 @@
       <%= link_to t(".profile"), root_path, class: "dropdown-item" %>
       <%= link_to t("your_favourites"), root_path, class: "dropdown-item" %>
       <div class="dropdown-divider"></div>
+        <% if current_user.admin? %>
+          <%= link_to "manage", admin_users_path, class: "dropdown-item" %>
+        <% end %>
       <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     </div>
   </li>
