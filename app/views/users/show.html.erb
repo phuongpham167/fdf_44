@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row my-12">
+    <div class="col-md-6 border border-primary rounded row">
+      <div class="col-md-12">
+        <% if current_user.avatar? %>
+          <%= image_tag (current_user.avatar.url), class: "avatar-user" %>
+        <% else %>
+          <%= image_tag "user.png", class: "avatar-user" %>
+        <% end %>
+        <h4 class="my-1"><%= @user.name %></h4>
+        <h6 class="my-1"><%= @user.email %></h6>
+        <div class="my-2 row">
+          <%= link_to "edit", edit_user_path %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-mad-12">
+        <h4><%= @user.phone_number %></h4>
+        <h4><%= @user.address %></h4>
+      </div>
+    </div>
+  </div>
+</div>

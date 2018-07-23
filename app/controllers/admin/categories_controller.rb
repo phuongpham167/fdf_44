@@ -3,7 +3,7 @@ class Admin::CategoriesController < Admin::AdminController
   before_action :load_category, only: %i(show edit update destroy)
 
   def index
-    @categories = Category.all.select(:id, :name).order(created_at: :desc)
+    @categories = Category.select_fields.order_by_time
       .page(params[:page]).per Settings.user.per_page
   end
 

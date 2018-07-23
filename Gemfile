@@ -7,6 +7,8 @@ end
 
 gem "bcrypt"
 gem "bootstrap"
+gem "carrierwave", "1.2.2"
+gem "mini_magick", "4.7.0"
 gem "coffee-rails", "4.2.2"
 gem "config"
 gem "devise"

@@ -9,7 +9,7 @@
         <%= link_to  t(".product"), products_path %>
       </li>
       <li class="breadcrumb-item active"><%= t(".product_detail")%></li>
-    </ul> 
+    </ul>
   </div>
 </div>
 <div class="row">
@@ -27,12 +27,12 @@
         </div>
         <%= render partial: "images_product", collection: @product.images, as: :image %>
       </div>
-      <a class="carousel-control-prev" role="#carousel-1" data-slide="prev" href="#carousel-1"> 
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+      <a class="carousel-control-prev" role="#carousel-1" data-slide="prev" href="#carousel-1">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only"><%= t ".previous" %></span>
       </a>
       <a class="carousel-control-next" role="button" data-slide="next" href="#carousel-1">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span> 
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only"><%= t ".next" %></span>
       </a>
     </div>
