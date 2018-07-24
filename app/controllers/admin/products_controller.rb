@@ -1,5 +1,6 @@
 class Admin::ProductsController < Admin::AdminController
   before_action :load_product, only: %i(show edit update destroy)
+  before_action :product_params, only: :create
 
   def index
     @products = Product.order_by_name
@@ -9,17 +10,13 @@ class Admin::ProductsController < Admin::AdminController
 
   def new
     @product = Product.new
+    @image = @product.images.build
   end
 
   def create
     @product = Product.new product_params
-    if @product.save
-      flash[:success] = t ".success"
-      redirect_to admin_products_path
-    else
-      flash[:error] = t ".error"
-      render :new
-    end
+    insert_data
+    redirect_to admin_products_path
   end
 
   def show; end
@@ -58,5 +55,16 @@ class Admin::ProductsController < Admin::AdminController
 
   def product_params
     params.require(:product).permit :name, :price, :descriptions, :category_id
+  end
+
+  def insert_data
+    ActiveRecord::Base.transaction do
+      @product.save
+      params[:images]["image_link"].each do |image|
+        @image = Image.create product_id: @product.id, image_link: image
+        @image.save
+      end
+    end
+    return unless @product.persisted?
   end
 end
