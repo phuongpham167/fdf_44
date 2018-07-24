@@ -8,8 +8,10 @@
       <hr>
     </div>
     <div class="col-12" id="formFilter">
+      <%= render "shared/form_search" %>
+      <br>
       <%= search_form_for @filter,  url: search_products_path,
-          html: { method: :post } do |f| %>  
+          html: { method: :post } do |f| %>
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-prepend">
@@ -20,9 +22,9 @@
             <div class="input-group-prepend">
               <a class="btn btn-outline-dark"><%= t ".category" %></a>
             </div>
-            <%= f.select :category_id_eq, 
-                  options_from_collection_for_select(@categories, "id", "name"), 
-                  {include_blank: t(".pick some one")}, 
+            <%= f.select :category_id_eq,
+                  options_from_collection_for_select(@categories, "id", "name"),
+                  {include_blank: t(".pick some one")},
                   {class: "form-control"} %>
             <div class="input-group-prepend">
               <a class="btn btn-outline-dark"><%= t ".sort" %></a>
@@ -31,11 +33,11 @@
               <%= s.sort_select %>
             <% end %>
             <div class="input-group-prepend">
-              <%= f.submit t(".go"), class: "btn btn-primary" %>  
+              <%= f.submit t(".go"), class: "btn btn-primary" %>
             </div>
           </div>
         </div>
-      <% end %>  
+      <% end %>
     </div>
   </div>
   <div class="row">

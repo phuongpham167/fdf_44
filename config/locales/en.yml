@@ -99,6 +99,7 @@ en:
       order: "Order"
       add: "+"
       delete: "-"
+      order: "Order"
   money: "₫"
   layouts:
     application:
@@ -190,7 +191,7 @@ en:
       signup: "Sign Up"
     form_search:
       light: "Search"
-      search: "What are you looking for ?"   
+      search: "What are you looking for ?"
   users:
     show:
       edit: "Edit"
@@ -199,4 +200,38 @@ en:
       submit: "Submit"
     form_search:
       light: "Search"
-      search: "What are you looking for ?"      
+      search: "What are you looking for ?"
+  orders:
+    get_status_name:
+      inprogess: "Order In Progess"
+      resolved: "Order was resolved"
+      new_order: "New Order"
+    new:
+      danger: "Please choose products"
+      bill: "Bill"
+      name: "Name"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      back_to_cart: "Back to cart"
+      total_money: "Total Money"
+    create:
+      success: "Order success"
+    form:
+      submit: "Submits"
+    index:
+      manage: "Manage Orders"
+      order_code: "Order Code"
+      order_date: "Order Date"
+      order_status: "Order Status"
+      order_address: "Address"
+      detail: "Detail"
+    show:
+      user: "User: "
+      phone: "Phone: "
+      address: "Address: "
+      stutus_of_order: "Status of Order: "
+      products: "Products"
+      product: "Product"
+      quantity: "Quantity"
+      price: "Price"
+
