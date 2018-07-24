@@ -180,13 +180,23 @@ en:
       rating: "Rating: "
       read_more: "Read more"
       no_descriptions: "No descriptions"
+    index:
+      go: "Go"
+      min_price: "Min price"
+      max_price: "Max price"
   shared:
     form_login:
       login: "Login"
       signup: "Sign Up"
+    form_search:
+      light: "Search"
+      search: "What are you looking for ?"   
   users:
     show:
       edit: "Edit"
     form:
       title: "Edit Profile"
       submit: "Submit"
+    form_search:
+      light: "Search"
+      search: "What are you looking for ?"      

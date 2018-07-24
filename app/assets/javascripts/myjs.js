@@ -13,5 +13,8 @@ $(document).ready(function(){
       $("#signup").removeClass("s-attop");
       $("#signup").addClass("s-atbottom");
     });
+    $("#filter").on("click", function() {
+      $("#formFilter").toggle();
+    });
   }
 );

@@ -11,8 +11,16 @@ Rails.application.routes.draw do
     resources :users, :categories, :products, :orders, :images, :product_temps
   end
 
+  concern :paginatable do
+    get "(page/:page)", action: :index, on: :collection, as: ""
+  end
+
   root "static_pages#home"
-  resources :products, only: %i(index show)
   resources :carts, only: :index
   resources :users
+  resources :products, only: %i(index show), concerns: :paginatable do
+    collection do
+      match "search" => "products#search", via: [:get, :post], as: :search
+    end
+  end
 end
