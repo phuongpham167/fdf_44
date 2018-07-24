@@ -184,3 +184,9 @@ en:
     form_login:
       login: "Login"
       signup: "Sign Up"
+  users:
+    show:
+      edit: "Edit"
+    form:
+      title: "Edit Profile"
+      submit: "Submit"

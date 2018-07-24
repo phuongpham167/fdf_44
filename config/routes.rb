@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   root "static_pages#home"
   resources :products, only: %i(index show)
   resources :carts, only: :index
+  resources :users
 end
