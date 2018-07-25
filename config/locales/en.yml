@@ -84,6 +84,15 @@ en:
         confirm: "Are you sure?"
         rating: "Rating"
         star: "/5"
+    product_temps:
+      update:
+        error: "Update failed"
+      index:
+        name: "Name"
+        price: "Price"
+        descriptions: "Descriptions"
+        status: "Status"
+        edit: "Edit"
   carts:
     load_product_in_cart:
       danger: "Please choose product"
@@ -234,4 +243,13 @@ en:
       product: "Product"
       quantity: "Quantity"
       price: "Price"
+  product_temps:
+    create:
+      danger: "Create failed"
+      success: "Create success"
+    index:
+      name: "Name"
+      price: "Price"
+      descriptions: "Descriptions"
+      status: "Status"
 

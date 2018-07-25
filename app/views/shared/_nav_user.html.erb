@@ -9,6 +9,7 @@
     <div class="dropdown-menu" x-placement="bottom-start">
       <%= link_to t(".profile"), current_user, class: "dropdown-item" %>
       <%= link_to t("your_favourites"), root_path, class: "dropdown-item" %>
+      <%= link_to "Your suggest", product_temps_path, class: "dropdown-item" %>
       <%= link_to "Follow Orders", orders_path, class: "dropdown-item" %>
       <div class="dropdown-divider"></div>
         <% if current_user.admin? %>

@@ -18,6 +18,7 @@
           <tr>
             <td><%= order.id %></td>
             <td><%= order.created_at %></td>
+            <td><%= order.created_at.strftime("%Y-%m-%d") %></td>
             <td><%= order.user.name %></td>
             <td><%= order.address %></td>
             <td><%= link_to t(".detail"), order %></td>
