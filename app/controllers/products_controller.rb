@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     @products = @q.result.includes(:category)
       .page(params[:page])
       .per Settings.product_per_page
-    @categories = Category.all.order_by_name 
+    @categories = Category.all.order_by_name
   end
 
   def show; end
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   private
 
   def load_product
-    @product = Product.includes(:images).find_by(id: params[:id]) || not_found 
+    @product = Product.includes(:images).find_by(id: params[:id]) || not_found
   end
 
   def set_ransack_search_object

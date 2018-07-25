@@ -26,7 +26,7 @@
   <%= f.fields_for :images do |p| %>
     <div class="field">
       <%= p.label :images %><br>
-      <%= p.file_field :image_link, multiple: true, name: "images[image_link][]" %>
+      <%= p.file_field :image_link,  multiple: true, name: "images[image_link][]",accept: "image/jpeg,image/jpg,image/png" %>
     </div>
   <% end %>
   <br>

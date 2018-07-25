@@ -2,9 +2,7 @@ class Admin::OrdersController < Admin::AdminController
   before_action :load_order, only: %i(show edit update destroy)
 
   def index
-    @orders = Order.order_by_time.order_by_status
-      .page(params[:page])
-      .per Settings.product_per_page
+    @orders = Order.order_by_status.order_by_time.page(params[:page]).per Settings.product_per_page
   end
 
   def edit; end

@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <ul class="list-group">
         <li class="list-group-item text-center bg-primary">
-          <%= link_to t(".new"), new_admin_category_path, class: "text-body" %>
+          <%= link_to t(".new"), new_admin_category_path, class: "text-body nav-item" %>
         </li>
         <li class="list-group-item text-center bg-primary">
           <%= t ".categories" %>
@@ -27,3 +27,4 @@
     </div>
   </div>
 </div>
+<%= paginate @categories %>

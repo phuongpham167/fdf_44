@@ -1,33 +1,33 @@
 <div class="container">
   <div class="row">
     <div class="col-12 mg-t">
+      <%= render "shared/form_search" %>
+      <br>
       <h2>
         <%= t ".product" %>
-        <span class="float-right" id="filter">filter</span>
+        <span class="float-right" id="filter"><a href="#" class="btn btn-primary">fillter</a></span>
       </h2>
       <hr>
     </div>
     <div class="col-12" id="formFilter">
-      <%= render "shared/form_search" %>
-      <br>
       <%= search_form_for @filter,  url: search_products_path,
           html: { method: :post } do |f| %>
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-prepend">
-              <a class="btn btn-outline-dark"><%= t ".price" %></a>
+            <div class="input-group-prepend key-fillter">
+              <a class="btn ah"><%= t ".price" %></a>
             </div>
             <%= f.search_field :price_gteq, class: "form-control", placeholder: t(".min_price") %>
             <%= f.search_field :price_lteq, class: "form-control", placeholder: t(".max_price") %>
-            <div class="input-group-prepend">
-              <a class="btn btn-outline-dark"><%= t ".category" %></a>
+            <div class="input-group-prepend key-fillter">
+              <a class="btn ah"><%= t ".category" %></a>
             </div>
             <%= f.select :category_id_eq,
                   options_from_collection_for_select(@categories, "id", "name"),
                   {include_blank: t(".pick some one")},
                   {class: "form-control"} %>
-            <div class="input-group-prepend">
-              <a class="btn btn-outline-dark"><%= t ".sort" %></a>
+            <div class="input-group-prepend key-fillter">
+              <a class="btn"><%= t ".sort" %></a>
             </div>
             <%= f.sort_fields do |s| %>
               <%= s.sort_select %>
@@ -45,19 +45,18 @@
       <%= render partial: "product", collection: @products, as: :product %>
     </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <%= paginate @products %>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-5">
+      <%= paginate @products %>
+    </div>
   </div>
 </div>
 <hr>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      Goi y mon moi
+      <%= t ".suggest" %>
     </div>
-    <%= render "shared/form_suggest" %>
   </div>
+   <%= render "shared/form_suggest" %>
 </div>
