@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :favourites, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :product_temps
+  ratyrate_rater
 
   enum role: [:member, :admin]
 

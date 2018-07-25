@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new order_params
     insert_data
+    UserNotifierMailer.send_order_email(current_user).deliver
     session[:cart] = nil
     flash[:success] = t ".success"
     redirect_to orders_path

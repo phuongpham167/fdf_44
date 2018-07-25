@@ -9,4 +9,13 @@ module ApplicationHelper
     return unless user_signed_in?
     render "shared/nav_user"
   end
+
+  def load_rating
+    if @product.average("rating").nil?
+      Settings.rating.default
+    else
+      @product.average("rating").avg
+      @product.update_avg_point
+    end
+  end
 end
