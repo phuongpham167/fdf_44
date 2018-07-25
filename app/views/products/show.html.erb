@@ -48,7 +48,8 @@
       <h6 class="mb-0"><%= t(".price")%>: <%= @product.price.to_s + " " + t(:money).html_safe  %></h6>
       <br>
       <h6 class="mb-0">
-        <%= t ".people_rating:" %>
+
+        <%= t ".people_rating:" %>  
         <%= @product.rates("rating").count %>
       </h6>
       <br>
@@ -61,6 +62,8 @@
         <h6 class="mb-0">
           <div class="hidden">
             <%= load_rating %>
+          <div>  
+        </h6> 
           <div>
         </h6>
       <% end %>
