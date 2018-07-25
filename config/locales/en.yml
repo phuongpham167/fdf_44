@@ -220,7 +220,7 @@ en:
       submit: "Submits"
     index:
       manage: "Manage Orders"
-      order_code: "Order Code"
+      ordercode: "Order Code"
       order_date: "Order Date"
       order_status: "Order Status"
       order_address: "Address"

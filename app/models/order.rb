@@ -8,4 +8,5 @@ class Order < ApplicationRecord
 
   scope :load_order, -> user_id {where user_id: user_id}
   scope :order_by_time, -> {order created_at: :desc}
+  scope :order_by_status, -> { order status: :asc}
 end

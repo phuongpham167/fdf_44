@@ -62,3 +62,5 @@ node_modules/
 /.rubocop_enable.yml
 
 config/database.yml
+
+/assets/images/*
