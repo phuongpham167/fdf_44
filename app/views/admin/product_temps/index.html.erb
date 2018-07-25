@@ -1,0 +1,33 @@
+<div class="row container-fluid">
+  <div class="col-md-12">
+    <h3><%= t ".manage" %></h3>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th><%= t ".name" %></th>
+          <th><%= t ".price" %></th>
+          <th><%= t ".descriptions" %></th>
+          <th><%= t ".status" %></th>
+          <th><%= t ".edit" %></th>
+        </tr>
+      </thead>
+      <tbody id="orders">
+        <% @product_temps.each do |product_temp| %>
+          <tr>
+            <td><%= product_temp.name %></td>
+            <td><%= product_temp.price %></td>
+            <td><%= product_temp.descriptions %></td>
+            <%= form_for [:admin, product_temp] do |f| %>
+              <td>
+                <%= select "product_temp", "status" , ProductTemp.statuses.collect { |a|  [a[0], a[1]] },selected: ProductTemp.statuses[product_temp.status] %>
+              </td>
+              <td>
+                <%= f.submit t(".edit"), class: "btn" %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
