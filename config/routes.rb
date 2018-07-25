@@ -23,4 +23,5 @@ Rails.application.routes.draw do
       match "search" => "products#search", via: [:get, :post], as: :search
     end
   end
+  resources :orders
 end

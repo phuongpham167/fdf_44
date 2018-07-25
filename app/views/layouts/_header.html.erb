@@ -5,11 +5,6 @@
       <li class="nav-item">
         <%= link_to t(".contact"), contact_path, class: "nav-link" %>
       </li>
-      <% if user_signed_in? %>
-        <li class="nav-item search" id="searchForm">
-          <%= render "shared/form_search" %>
-        </li>
-      <% end %>
     </ul>
     <div class="collapse navbar-collapse text-center justify-content-end" id="navbarSecondarySupportedContent">
       <div class="text-center">
