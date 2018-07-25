@@ -48,7 +48,7 @@
       <h6 class="mb-0"><%= t(".price")%>: <%= @product.price.to_s + " " + t(:money).html_safe  %></h6>
       <br>
       <h6 class="mb-0">
-        <%= t ".people_rating:" %>  
+        <%= t ".people_rating:" %>
         <%= @product.rates("rating").count %>
       </h6>
       <br>
@@ -61,13 +61,18 @@
         <h6 class="mb-0">
           <div class="hidden">
             <%= load_rating %>
-          <div>  
-        </h6> 
+          <div>
+        </h6>
       <% end %>
       <br>
       <div class="btn-group mg-t-l">
         <a href="#" class="btn btn-primary"><%= t ".book_mark" %></a>
         <%= link_to t(".cart"), add_cart_path(@product), class: "btn btn-sm btn-primary" %>
+      </div>
+      <hr>
+      <div>
+        Share on FACEBOOK:
+        <%= social_share_button_tag(@product.name, desc: @product.name) %>
       </div>
     </div>
     </div>

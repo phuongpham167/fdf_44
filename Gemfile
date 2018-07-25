@@ -25,6 +25,7 @@ gem "turbolinks", "5.0.1"
 gem "uglifier", "3.2.0"
 gem "omniauth"
 gem "omniauth-facebook", "4.0.0"
+gem "social-share-button", github: "huacnlee/social-share-button"
 
 group :development, :test do
   gem "byebug", "9.0.6", platform: :mri
