@@ -1,6 +1,6 @@
 class ProductTempsController < ApplicationController
   def index
-    @product_temps = ProductTemp.load_product_temps(current_user).order_by_status.order_by_time
+    @product_temps = ProductTemp.load_product_temps(current_user).order_by_status.order_by_time.page(params[:page]).per Settings.product_per_page
   end
 
   def new

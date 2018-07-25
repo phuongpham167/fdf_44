@@ -3,8 +3,8 @@
     <div class="col-md-12">
       <div class="panel panel-primary filterable">
         <div class="list-group-item panel-heading bg-primary">
+          <%= link_to t(".new"), new_admin_product_path, class: " nav-item" %>
           <div class="panel-title"><%= t ".describes" %></div>
-          <%= link_to t(".new"), new_admin_product_path, class: "text-dark" %>
         </div>
         <div class="container">
           <%= render @products %>
