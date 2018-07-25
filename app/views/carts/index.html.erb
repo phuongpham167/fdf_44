@@ -1,0 +1,76 @@
+<div class="py-3 container">
+  <div class="row">
+    <div class="col-md-12">
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th><%= t ".product" %></th>
+            <th><%= t ".image" %></th>
+            <th><%= t ".price" %></th>
+            <th><%= t ".quantity" %></th>
+            <th><%= t ".subtotal" %></th>
+            <th><%= t ".remove" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @products_in_cart.each do |product| %>
+            <tr>
+              <td>
+                <%= product.name %>
+              </td>
+              <td>
+                <%= image_tag product.images.first.image_link, class: "image-product" %>
+              </td>
+              <td>
+                <%= product.price %>
+              </td>
+              <td>
+                <div class="btn btn-default">
+                  <%= link_to t(".delete"), update_quantity_path(product), class: "btn btn-sm" %>
+                </div>
+                <%= session[:cart][product.id.to_s] %>
+                <div class="btn btn-default">
+                  <%= link_to t(".add"), add_cart_path(product), class: "btn btn-sm" %>
+                </div>
+              </td>
+              <td>
+                <%= sub_product_price(product) %>
+              </td>
+              <td>
+                <div class="btn btn-default">
+                  <%= link_to t(".remove"), remove_product_path(product), class: "btn btn-sm" %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <%= link_to root_path, class: "btn btn-warning" do %>
+                <i class="glyphicon glyphicon-arrow-left"></i>&nbsp;<%= t ".continue" %>
+              <% end %>
+            </td>
+            <td colspan="2"></td>
+            <td class="total_price">
+              <div><%= t ".total" %></div>
+            </td>
+            <% unless is_empty_cart? %>
+              <td>
+                  <%= sum_total_price %>
+              </td>
+              <td>
+                <%= link_to t(".remove"), remove_cart_path, class: "btn btn-sm" %>
+              </td>
+            <% end %>
+          </tr>
+        </tfoot>
+      </table>
+      <div>
+        <h5><%= link_to t(".order"), new_order_path ,class: "btn btn-success btn-block"%>
+          <i class="fa fa-angle-right"></i>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

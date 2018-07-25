@@ -1,0 +1,39 @@
+<div class="py-3 container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-primary filterable">
+        <div class="list-group-item panel-heading bg-primary">
+          <div><%= link_to t(".new_user"), new_admin_user_path, class: "text-body nav-item" %></div>
+        </div>
+        <div class="list-group-item panel-heading bg-primary">
+          <div class="panel-title"><%= t ".all_users" %></div>
+        </div>
+        <table class="table table-light table-bordered table-hover">
+          <thead class="thead-light">
+            <tr class="filters">
+              <th><input type="text" class="form-control text-center" placeholder=<%= t ".name" %> disabled></th>
+              <th><input type="text" class="form-control text-center" placeholder=<%= t ".email" %> disabled></th>
+              <th><input type="text" class="form-control text-center" placeholder=<%= t ".role" %> disabled></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td>
+                  <% if user.admin? %>
+                    <%= t ".admin" %>
+                  <% else %>
+                    <%= t ".user" %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<%= paginate @users %>

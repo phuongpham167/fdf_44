@@ -1,0 +1,90 @@
+<div class="container">
+<div class="row">
+  <div class="col-12">
+    <ul class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item">
+        <%= link_to  t(".home"), root_path %>
+      </li>
+      <li class="breadcrumb-item">
+        <%= link_to  t(".product"), products_path %>
+      </li>
+      <li class="breadcrumb-item active"><%= t(".product_detail")%></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+     <div class="carousel slide my-3" data-ride="carousel" id="carousel-1">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <%= image_tag @product.images.first.image_link, class: "img-fluid img-thumbnail" %>
+          <div class="carousel-caption">
+            <h4 class="name"><%= t ".tasty_bunny" %></h4>
+            <p class="mb-0 context">
+              <%= truncate @product.descriptions || t(".no_descriptions"), length: Settings.sort_descriptions %>
+            </p>
+          </div>
+        </div>
+        <%= render partial: "images_product", collection: @product.images, as: :image %>
+      </div>
+      <a class="carousel-control-prev" role="#carousel-1" data-slide="prev" href="#carousel-1">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"><%= t ".previous" %></span>
+      </a>
+      <a class="carousel-control-next" role="button" data-slide="next" href="#carousel-1">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"><%= t ".next" %></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-md-4 p-3">
+    <div class="card-header bg-primary">
+      <h5 class="mb-0 text-center"><%= @product.category_name %></h5>
+    </div>
+    <div class="card-body">
+      <h6 class="mb-0"><%= t(".product_name")%>: <%= @product.name %></h6>
+      <br>
+      <h6 class="mb-0"><%= t(".price")%>: <%= @product.price.to_s + " " + t(:money).html_safe  %></h6>
+      <br>
+      <h6 class="mb-0">
+
+        <%= t ".people_rating:" %>  
+        <%= @product.rates("rating").count %>
+      </h6>
+      <br>
+      <h6 class="mb-0">
+        <%= t(".rating") %>
+        <%= rating_for @product, "rating", star: 5, disable_after_rate: false %>
+      </h6>
+      <br>
+      <% if @product.rates %>
+        <h6 class="mb-0">
+          <div class="hidden">
+            <%= load_rating %>
+          <div>  
+        </h6> 
+          <div>
+        </h6>
+      <% end %>
+      <br>
+      <div class="btn-group mg-t-l">
+        <a href="#" class="btn btn-primary"><%= t ".book_mark" %></a>
+        <%= link_to t(".cart"), add_cart_path(@product), class: "btn btn-sm btn-primary" %>
+      </div>
+      <hr>
+      <div>
+        Share on FACEBOOK:
+        <%= social_share_button_tag(@product.name, desc: @product.name) %>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p class="text-justify"><%= @product.descriptions %></p>
+    </div>
+  </div>
+</div>
+<hr class="mb-4">

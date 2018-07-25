@@ -1,0 +1,30 @@
+<%= link_to product_path(product.id) do %>
+  <div class="column">
+    <div class="demo-title"></div>
+    <div class="post-module">
+      <div class="thumbnail">
+        <%= load_new_product product %>
+        <%= image_tag product.images.first.image_link %>
+      </div>
+      <div class="post-content">
+        <div class="category"><%= product.category_name %></div>
+        <h2 class="sub_title"><%= product.name %></h2>
+        <h2 class="price"><%= t("money").html_safe + " " + product.price.to_s %></h2>
+        <p class="descriptions">
+          <%= truncate product.descriptions || t(".no_descriptions"), length: Settings.sort_descriptions %>
+          <%= link_to t(".read_more"), product %>
+        </p>
+        <div class="post-meta">
+          <span class="timestamp">
+            <%= link_to t(".cart"), add_cart_path(product), class: "btn btn-sm" %>
+            <%= link_to t(".favourite"), root_path, class: "btn btn-sm" %>
+          </span>
+          <span class="comments">
+            <i class="fa fa-comments"></i><%= t ".rating" %>
+            <%= product.average_point %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

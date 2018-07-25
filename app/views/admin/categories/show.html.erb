@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3 border border-primary rounded row">
+      <h4 class="col-md-12"><%= t ".describe_title" %><%= @category.name %></h4>
+      <%= t ".describe_title" %><p align="justify"><%= t ".describe_content" %></p>
+      <div class="col-md-12 row">
+        <%= link_to t(".edit"), edit_admin_category_path(@category),
+          class: "col-md-2 btn btn-sm btn-outline-primary" %>
+        <%= link_to t(".delete"), admin_category_path, method: :delete,
+          data: { confirm: t(".confirm") },
+          class: "col-md-2 btn btn-sm btn-outline-danger" %>
+      </div>
+    </div>
+    <div class="col-md-12 my-3">
+      <div class="col-md-12">
+        <div class="panel panel-primary filterable">
+          <div class="list-group-item panel-heading bg-primary">
+            <div class="panel-title"><%= t ".product_of" %><% @category.name %></div>
+          </div>
+          <table class="table table-light table-bordered table-hover">
+            <thead class="thead-light">
+              <tr class="filters">
+                <th><input type="text" class="form-control text-center" placeholder=<%= t ".name" %> disabled></th>
+                <th><input type="text" class="form-control text-center" placeholder=<%= t ".price" %> disabled></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @category.products.each do |product| %>
+                <tr>
+                  <td><%= link_to product.name, admin_product_path(product), class: "text-body" %></td>
+                  <td><%= t(:money).html_safe + " " + product.price.to_s %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

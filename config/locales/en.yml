@@ -1,0 +1,258 @@
+en:
+  admin:
+    categories:
+      create:
+        success: "Create success"
+        fail: "Create failed"
+      destroy:
+        success: "Delete success"
+        danger: "Delete failed"
+        warning: "Can not delete this Category"
+      form:
+        submit: "Submit"
+      edit:
+        title: "Edit category"
+      index:
+        categories: "Categories"
+        new: "New category"
+        product: "Product"
+        price: "Price"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      load_category:
+        danger: "Category not found"
+      new:
+        new_category: "New Category"
+      update:
+        success: "Update success"
+      show:
+        confirm: "Are you sure?"
+        describe_title: "Category describe: "
+        describe_content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        edit: "Edit this category"
+        delete: "Delete this category"
+        product_of: "Product of"
+        name: "Name"
+        price: "Price"
+    danger: "Admin only"
+    users:
+      success: "Create success"
+      danger: "Create failed"
+      form:
+        create: "Create"
+      index:
+        new_user: "New user?"
+        all_users: "All users"
+        name: "Name"
+        email: "Email"
+        role: "Role"
+        admin: "Admin"
+        user: "User"
+      new:
+        new: "Create New User"
+    load_user:
+      danger: "No user"
+    products:
+      create:
+        success: "Create success"
+        error: "Create fail"
+      edit:
+        describes: "Edit product"
+      form:
+        name: "Name product"
+        describe: "Descibes"
+        price: "Price"
+        submit: "Submit"
+      delete:
+        success: "Delete success"
+        danger: "Delete not success. Pls try again"
+      index:
+        describes: "All products"
+        new: "Add new product"
+      new:
+        describes: "New product"
+      update:
+        success: "Update success"
+        danger: "Update fail"
+      load_product:
+        danger: "Product not found"
+      product:
+        read_more: "Read more"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+        rating: "Rating"
+        star: "/5"
+    product_temps:
+      update:
+        error: "Update failed"
+      index:
+        name: "Name"
+        price: "Price"
+        descriptions: "Descriptions"
+        status: "Status"
+        edit: "Edit"
+  carts:
+    load_product_in_cart:
+      danger: "Please choose product"
+    index:
+      product: "Product"
+      image: "Image"
+      price: "Price"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      remove: "Remove"
+      continue: "Add Product"
+      total: "Total Money"
+      order: "Order"
+      add: "+"
+      delete: "-"
+      order: "Order"
+  money: "₫"
+  layouts:
+    application:
+      name_app: "TastyBunny"
+    admin:
+      name_app: "TastyBunny"
+    admin_header:
+      name_app: "TastyBunny"
+      contact: "Contact"
+      log_out: "Log out"
+      search: "Search"
+      users: "Users"
+      categories: "Categories"
+    header:
+      about: "About"
+      contact: "Contact us"
+      name_app: "TastyBunny"
+      log_out: "Log out"
+      search: "Search"
+      manage: "Manage"
+      cart: "Cart"
+    footer:
+      about: "About us"
+      address: "Ha Noi, Viet Nam"
+      contact: "Contact"
+      coppy: "© Copyright 2017 Pingendo - All rights reserved."
+      home: "home"
+      label: "Get our newsletter"
+      mail: "pham.thi.thu.phuong@framgia.com"
+      map: "Mapsite"
+      name_app: "TastyBunny"
+      name_store: "Food Store"
+      phone: "01695779469"
+      place_holder: "Enter email"
+      services: "Our services"
+      story: "Stories"
+      subcribe: "Subcribe"
+      submit: "Submit"
+  static_pages:
+    home:
+      comment1: "Đây là một quán bán đồ ăn tuyệt vời"
+      des_peo1: "Senior developer"
+      des_peo2: "UI designer"
+      des_peo3: "Boss"
+      email: "Email"
+      foget: "Forgot Password?"
+      hello: "Hello you"
+      lead: "We grow together with the community"
+      login: "Log in"
+      login_with_fb: "Login with facebook"
+      password: "Password"
+      password_cf: "Password confirm"
+      peo1: "Meow"
+      peo2: "J. L. Fish"
+      peo3: "Carlito"
+      quotes: "Food should be blank as hell, strong as death and sweet as love"
+      remember: "Remember Me"
+      review: "Review"
+      signup: "Sign up"
+      slogan: "Simply Tasty, Simply Better"
+    contact:
+      contact_us: "Contact us"
+      email: "Email address"
+      enter_ameil: "Enter Email"
+      input_email: "InputEmail"
+      input_name: "InputName"
+      name: "Your name"
+      quotes: "We would love to hear from you"
+      submit: "Submit"
+      type_here: "Type here"
+      write: "Write here"
+      your_email: "Your Email"
+      your_name: "Your Name"
+  products:
+    product:
+      new: "new"
+      cart: "Cart"
+      favourite: "Favourite"
+      rating: "Rating: "
+      read_more: "Read more"
+      no_descriptions: "No descriptions"
+    index:
+      go: "Go"
+      min_price: "Min price"
+      max_price: "Max price"
+      suggest: "Suggest New Product"
+  shared:
+    form_login:
+      login: "Login"
+      signup: "Sign Up"
+    form_search:
+      light: "Search"
+      search: "What are you looking for ?"
+    form_suggest:
+      submit: "Create"
+  users:
+    show:
+      edit: "Edit"
+    form:
+      title: "Edit Profile"
+      submit: "Submit"
+    form_search:
+      light: "Search"
+      search: "What are you looking for ?"
+  orders:
+    get_status_name:
+      inprogess: "Order In Progess"
+      resolved: "Order was resolved"
+      new_order: "New Order"
+    new:
+      danger: "Please choose products"
+      bill: "Bill"
+      name: "Name"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      back_to_cart: "Back to cart"
+      total_money: "Total Money"
+    create:
+      success: "Order success"
+    form:
+      submit: "Submits"
+    index:
+      manage: "Manage Orders"
+      ordercode: "Order Code"
+      order_date: "Order Date"
+      order_status: "Order Status"
+      order_address: "Address"
+      detail: "Detail"
+    show:
+      user: "User: "
+      phone: "Phone: "
+      address: "Address: "
+      stutus_of_order: "Status of Order: "
+      products: "Products"
+      product: "Product"
+      quantity: "Quantity"
+      price: "Price"
+  product_temps:
+    create:
+      danger: "Create failed"
+      success: "Create success"
+    index:
+      name: "Name"
+      price: "Price"
+      descriptions: "Descriptions"
+      status: "Status"
+

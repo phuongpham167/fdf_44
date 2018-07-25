@@ -47,3 +47,23 @@ bower.json
 # Ignore node_modules
 node_modules/
 
+/test/*
+
+/uploaders/*
+
+/public/uploads/*
+
+/vendor/*
+
+/public/*
+
+/.rubocop.yml
+/.rubocop_disable.yml
+/.rubocop_enable.yml
+
+config/database.yml
+
+/assets/images/*
+
+# Ignore application configuration
+/config/application.yml

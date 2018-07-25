@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <div class="container">
+    <%= link_to t(".name_app"), root_path, class: "navbar-brand" %>
+    <ul class="nav">
+      <li class="nav-item">
+        <%= link_to t(".product"), products_path, class: "nav-link nav-item" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t(".contact"), contact_path, class: "nav-link nav-item" %>
+      </li>
+    </ul>
+    <div class="collapse navbar-collapse text-center justify-content-end" id="navbarSecondarySupportedContent">
+      <div>
+        <span class="nav-link nav-item" style="color: red">
+          <% if !session[:cart].nil? %>
+            <%= session[:cart].count %>
+          <% end %>
+        </span>
+      </div>
+      <div class="text-center">
+        <a href="<%= carts_path %>" class ="nav-link nav-item" ><i class="fa fa-shopping-cart nav-item"></i><%= t ".cart" %></span></a>
+      </div>
+      <%= show_nav_user %>
+    </div>
+  </div>
+</nav>

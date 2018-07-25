@@ -1,0 +1,38 @@
+<div class="row order container-fluid">
+  <div class="col-md-6 order-form">
+    <%= render "form" %>
+  </div>
+  <div class="col-md-6 list-orderdetails">
+    <div class="row">
+      <h2 class="form-control"><%= t ".bill" %></h2>
+      <div class="col-md-12">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th><%= t ".name" %></th>
+              <th><%= t ".quantity" %></th>
+              <th><%= t ".subtotal" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @products_in_cart.each do |product| %>
+              <tr>
+                <td><%= product.name %></td>
+                <td><%= session[:cart][product.id.to_s] %></td>
+                <td><%= sub_product_price(product) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+          <tfoot>
+            <tr class="total">
+              <td><%= t ".total_money" %></td>
+              <td></td>
+              <td><%= sum_total_price %></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <%= link_to t(".back_to_cart"), carts_path, class: "btn btn-warning" %>
+  </div>
+</div>

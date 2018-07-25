@@ -1,0 +1,10 @@
+<div class="carousel-item">
+  <%= image_tag image.image_link, class: "img-fluid img-thumbnail" %>
+  <div class="carousel-caption">
+    <h4 class="name"><%= @product.name %></h4>
+    <p class="mb-0 context">
+      <%= truncate @product.descriptions || t(".no_descriptions"),
+        length: Settings.sort_descriptions %>
+    </p>
+  </div>
+</div>

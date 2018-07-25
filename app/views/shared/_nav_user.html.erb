@@ -1,0 +1,21 @@
+<ul class="navbar-nav">
+  <div>
+    <%= image_tag (current_user.avatar.url), class: "avatar-header" %>
+  </div>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      <%= current_user.name || t("anonymose") %>
+    </a>
+    <div class="dropdown-menu" x-placement="bottom-start">
+      <%= link_to t(".profile"), current_user, class: "dropdown-item" %>
+      <%= link_to t("your_favourites"), root_path, class: "dropdown-item" %>
+      <%= link_to "Your suggest", product_temps_path, class: "dropdown-item" %>
+      <%= link_to "Follow Orders", orders_path, class: "dropdown-item" %>
+      <div class="dropdown-divider"></div>
+        <% if current_user.admin? %>
+          <%= link_to "manage", admin_users_path, class: "dropdown-item" %>
+        <% end %>
+      <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    </div>
+  </li>
+</ul>

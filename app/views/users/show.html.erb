@@ -1,0 +1,24 @@
+<div class="container-fluid" style="padding-left: 300px; padding-top: 100px;">
+  <div class="row">
+    <div class="col-sm-3 col-md-4">
+      <div class="row">
+        <%= image_tag (current_user.avatar.url), class: "avatar-user img-rounded img-responsive" %>
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <blockquote>
+        <p><%= @user.name %></p> <small><cite title="Source Title"><%= @user.address %><i class="glyphicon glyphicon-map-marker"></i></cite></small>
+      </blockquote>
+      <p>
+        <i class="glyphicon glyphicon-envelope"></i> <%= @user.email %>
+        <br/>
+        <i class="glyphicon glyphicon-globe"></i> www.tastybunny.com
+        <br />
+        <i class="glyphicon glyphicon-gift"></i> January 30, 1974
+      </p>
+      <div class="row">
+         <%= link_to t(".edit"), edit_user_path, class: "btn btn-block btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

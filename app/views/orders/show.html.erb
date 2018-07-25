@@ -1,0 +1,46 @@
+<div class="py-3 container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="list-group-item panel-heading bg-primary">
+        <div class="panel-title"><%= t ".user"%><%= @order.user.name %></div>
+      </div>
+      <div class="list-group-item panel-heading bg-primary">
+        <div class="panel-title"><%= t ".phone"%><%= @order.phone %></div>
+      </div>
+      <div class="list-group-item panel-heading bg-primary">
+        <div class="panel-title"><%= t ".address"%><%= @order.address %></div>
+      </div>
+      <div class="list-group-item panel-heading bg-primary">
+        <div class="panel-title">
+          <%= t ".stutus_of_order"%>
+          <%= get_status_name(@order) %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-primary filterable">
+        <div class="list-group-item panel-heading bg-primary">
+          <div class="panel-title"><%= t ".products"%></div>
+        </div>
+        <table class="table table-light table-bordered">
+          <thead class="thead-light table-hover">
+            <tr class="filters">
+              <th><input type="text" class="form-control text-center" placeholder=<%= t ".product"%> disabled></th>
+              <th><input type="text" class="form-control text-center" placeholder=<%= t ".quantity"%> disabled></th>
+              <th><input type="text" class="form-control text-center" placeholder=<%= t ".price"%> disabled></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @order_details.each do |order_details| %>
+              <tr>
+                <td><%= order_details.product.name %></td>
+                <td><%= order_details.quantity %></td>
+                <td><%= order_details.price %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

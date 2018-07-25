@@ -1,0 +1,30 @@
+<div class="py-3 container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item text-center bg-primary">
+          <%= link_to t(".new"), new_admin_category_path, class: "text-body nav-item" %>
+        </li>
+        <li class="list-group-item text-center bg-primary">
+          <%= t ".categories" %>
+        </li>
+        <% @categories.each do |category| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="col-md-8 d-flex justify-content-between align-items-center">
+              <%= link_to category.name, admin_category_path(category) %>
+              <span class="badge badge-primary badge-pill"><%= category.products.count %></span>
+            </div>
+            <div class="col-md-4 d-flex justify-content-between align-items-center">
+              <%= link_to t(".edit"), edit_admin_category_path(category),
+                class: "col-md-2 btn btn-sm btn-outline-primary" %>
+              <%= link_to t(".delete"), admin_category_path(category), method: :delete,
+                data: {confirm: t(".confirm")},
+                class: "col-md-2 btn btn-sm btn-outline-danger" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= paginate @categories %>
