@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="panel panel-primary filterable">
         <div class="list-group-item panel-heading bg-primary">
-          <div><%= link_to t(".new_user"), new_admin_user_path, class: "text-body" %></div>
+          <div><%= link_to t(".new_user"), new_admin_user_path, class: "text-body nav-item" %></div>
         </div>
         <div class="list-group-item panel-heading bg-primary">
           <div class="panel-title"><%= t ".all_users" %></div>
@@ -36,3 +36,4 @@
     </div>
   </div>
 </div>
+<%= paginate @users %>

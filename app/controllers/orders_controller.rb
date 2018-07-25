@@ -1,15 +1,21 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.load_order(current_user).order_by_time
+    @orders = Order.load_order(current_user).order_by_status.order_by_time
+      .page(params[:page]).per Settings.product_per_page
   end
 
   def new
-    if session[:cart].empty?
-      flash[:danger] = t ".danger"
-      redirect_to root_path
+    if !current_user.nil?
+      if session[:cart].empty?
+        flash[:danger] = t ".danger"
+        redirect_to root_path
+      else
+        @order = Order.new
+        @products_in_cart = Product.load_product session[:cart].keys
+      end
     else
-      @order = Order.new
-      @products_in_cart = Product.load_product session[:cart].keys
+      flash[:danger] = "Pls Login"
+      redirect_to root_path
     end
   end
 

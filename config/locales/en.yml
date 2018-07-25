@@ -194,6 +194,7 @@ en:
       go: "Go"
       min_price: "Min price"
       max_price: "Max price"
+      suggest: "Suggest New Product"
   shared:
     form_login:
       login: "Login"
@@ -201,6 +202,8 @@ en:
     form_search:
       light: "Search"
       search: "What are you looking for ?"
+    form_suggest:
+      submit: "Create"
   users:
     show:
       edit: "Edit"
