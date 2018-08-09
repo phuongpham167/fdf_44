@@ -23,7 +23,9 @@ Rails.application.routes.draw do
     collection do
       match "search" => "products#search", via: [:get, :post], as: :search
     end
+    resources :likes, shallow: true
   end
   resources :orders
   resources :product_temps
+  resources :likes, only: :index
 end
