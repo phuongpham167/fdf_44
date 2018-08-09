@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :ratings
   has_many :images, dependent: :destroy
   has_many :order_details
-  has_many :favourites
+  has_many :likes
   ratyrate_rateable "rating"
 
   delegate :name, to: :category, prefix: true
@@ -26,5 +26,9 @@ class Product < ApplicationRecord
 
   def update_avg_point
     update_attribute(:average_point, rating_average.avg)
+  end
+
+  def is_liked user
+    Like.find_by(user_id: user, product_id: id)    
   end
 end

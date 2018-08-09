@@ -15,9 +15,15 @@
           <%= link_to t(".read_more"), product %>
         </p>
         <div class="post-meta">
-          <span class="timestamp">
+          <span class="timestamp" >
             <%= link_to t(".cart"), add_cart_path(product), class: "btn btn-sm" %>
-            <%= link_to t(".favourite"), root_path, class: "btn btn-sm" %>
+            <span id="like-icon-product-<%= product.id.to_s%>">
+              <% if product.is_liked(current_user.id).nil? %>
+                <%= link_to "Love", product_likes_path(product), method: :post, remote: true, class: "btn btn-sm"%>
+              <% else %>
+                <%= link_to "UnLove", like_path(product.is_liked(current_user)), method: :delete, remote: true, class: "btn btn-sm"%>
+              <% end %>
+            </span>
           </span>
           <span class="comments">
             <i class="fa fa-comments"></i><%= t ".rating" %>
