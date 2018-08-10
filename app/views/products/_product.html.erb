@@ -16,12 +16,14 @@
         </p>
         <div class="post-meta">
           <span class="timestamp" >
-            <%= link_to t(".cart"), add_cart_path(product), class: "btn btn-sm" %>
+            <span id = "addcart">
+              <%= link_to t(".cart"), add_cart_path(product), class: "btn btn-sm btn-primary" %>
+            </span>
             <span id="like-icon-product-<%= product.id.to_s%>">
               <% if product.is_liked(current_user.id).nil? %>
-                <%= link_to "Love", product_likes_path(product), method: :post, remote: true, class: "btn btn-sm"%>
+                <%= link_to "Love", product_likes_path(product), method: :post, remote: true, class: "btn btn-sm btn-primary"%>
               <% else %>
-                <%= link_to "UnLove", like_path(product.is_liked(current_user)), method: :delete, remote: true, class: "btn btn-sm"%>
+                <%= link_to "UnLove", like_path(product.is_liked(current_user)), method: :delete, remote: true, class: "btn btn-sm btn-primary"%>
               <% end %>
             </span>
           </span>

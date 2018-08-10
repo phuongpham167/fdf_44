@@ -14,7 +14,7 @@ class Admin::UsersController < Admin::AdminController
     @user = User.new user_params
     if @user.save
       flash[:success] = t "admin.users.success"
-      redirect_to request.referrer
+      redirect_to admin_users_path
     else
       flash[:danger] = t "admin.users.danger"
       render :new
