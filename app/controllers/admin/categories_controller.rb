@@ -50,6 +50,15 @@ class Admin::CategoriesController < Admin::AdminController
     end
   end
 
+  def search_category
+    @categories = Category.find_category params[:find_category]
+    if @categories != nil
+      @categories = @categories.select_fields.order_by_time
+      .page(params[:page]).per Settings.user.per_page
+      render :index      
+    end
+  end
+
   private
 
   def category_params

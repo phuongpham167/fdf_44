@@ -3,8 +3,16 @@
     <div class="col-md-12">
       <div class="panel panel-primary filterable">
         <div class="list-group-item panel-heading bg-primary">
+          <%= form_tag admin_search_product_path, method: :get, class: "search-input ", id: "form_search" do %>
+           <%= text_field_tag "find_product", params[:find_product], placeholder: "Find product by name",
+              id: "autocomplete", class: "form-control" %>
+          <% end %>
+        </div>
+        <div class="list-group-item panel-heading bg-primary">
           <%= link_to t(".new"), new_admin_product_path, class: " nav-item" %>
-          <div class="panel-title"><%= t ".describes" %></div>
+        </div>
+        <div class="list-group-item panel-heading bg-primary">
+          <%= link_to t(".describes"), admin_products_path, class: " nav-item" %>
         </div>
         <div class="container">
           <%= render @products %>

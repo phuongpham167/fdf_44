@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users, :categories, :products, :orders, :images, :product_temps
+    get "search_user", to: "users#search_user", as: :search_user
+    get "search_category", to: "categories#search_category", as: :search_category
+    get "search_product", to: "products#search_product", as: :search_product  
   end
 
   concern :paginatable do
