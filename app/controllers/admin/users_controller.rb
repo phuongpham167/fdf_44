@@ -23,6 +23,14 @@ class Admin::UsersController < Admin::AdminController
 
   def show;  end
 
+  def search_user
+    @users = User.find_user params[:find_user]
+    if @users != nil
+      @users = @users.page(params[:page]).per Settings.user.per_page
+      render :index
+    end
+  end
+  
   private
 
   def load_user

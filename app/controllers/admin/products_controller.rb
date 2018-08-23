@@ -47,6 +47,16 @@ class Admin::ProductsController < Admin::AdminController
     end
   end
 
+  def search_product
+    @products = Product.find_product params[:find_product]
+    if @products != nil
+      @products = @products.order_by_name
+      .page(params[:page])
+      .per Settings.product_per_page
+      render :index      
+    end
+  end
+
   private
 
   def load_product

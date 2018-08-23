@@ -7,4 +7,7 @@ class Category < ApplicationRecord
   scope :order_by_time, -> {order created_at: :desc}
   scope :order_by_name, -> {order name: :asc}
   scope :select_fields, -> {select :id, :name}
+  scope :find_category, (lambda do |keyword|
+    Category.where("categories.name LIKE ?", keyword)
+  end)
 end

@@ -3,10 +3,16 @@
     <div class="col-md-12">
       <ul class="list-group">
         <li class="list-group-item text-center bg-primary">
+          <%= form_tag admin_search_category_path, method: :get, class: "search-input ", id: "form_search" do %>
+           <%= text_field_tag "find_category", params[:find_category], placeholder: "Find category",
+              id: "autocomplete", class: "form-control" %>
+          <% end %>
+        </li>
+        <li class="list-group-item text-left bg-primary">
           <%= link_to t(".new"), new_admin_category_path, class: "text-body nav-item" %>
         </li>
-        <li class="list-group-item text-center bg-primary">
-          <%= t ".categories" %>
+        <li class="list-group-item text-left bg-primary">
+          <%= link_to t(".categories"), admin_categories_path, class: "text-body nav-item" %>
         </li>
         <% @categories.each do |category| %>
           <li class="list-group-item d-flex justify-content-between align-items-center">

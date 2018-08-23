@@ -15,7 +15,10 @@ class Product < ApplicationRecord
     .order("created_at desc")
   end)
   scope :load_product, -> product_ids {where id: product_ids}
-
+  scope :find_product, (lambda do |keyword|
+    Product.where("products.name LIKE ?", keyword)
+  end)
+  
   def new_product?
     created_at >= Settings.product_time_new.hours.ago
   end

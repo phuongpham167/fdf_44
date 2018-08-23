@@ -3,10 +3,18 @@
     <div class="col-md-12">
       <div class="panel panel-primary filterable">
         <div class="list-group-item panel-heading bg-primary">
+          <%= form_tag admin_search_user_path, method: :get, class: "search-input ", id: "form_search" do %>
+           <%= text_field_tag "find_user", params[:find_user], placeholder: "Find user by email",
+              id: "autocomplete", class: "form-control" %>
+          <% end %>
+        </div>
+        <div class="list-group-item panel-heading bg-primary">
           <div><%= link_to t(".new_user"), new_admin_user_path, class: "text-body nav-item" %></div>
         </div>
         <div class="list-group-item panel-heading bg-primary">
-          <div class="panel-title"><%= t ".all_users" %></div>
+          <div class="panel-title">
+            <%= link_to t(".all_users"), admin_users_path, class: "text-body nav-item" %>
+          </div>
         </div>
         <table class="table table-light table-bordered table-hover">
           <thead class="thead-light">
