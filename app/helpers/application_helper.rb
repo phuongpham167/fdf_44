@@ -18,4 +18,13 @@ module ApplicationHelper
       @product.update_avg_point
     end
   end
+
+  def full_title(page_title = '')
+    base_title = "Tasty bunny"
+    if page_title.empty?
+      base_title
+    else
+      page_title + " | " + base_title
+    end
+  end
 end
