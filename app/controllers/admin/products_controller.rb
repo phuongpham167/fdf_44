@@ -16,6 +16,7 @@ class Admin::ProductsController < Admin::AdminController
   def create
     @product = Product.new product_params
     insert_data
+    flash[:success] = "Create product success"
     redirect_to admin_products_path
   end
 
@@ -55,6 +56,7 @@ class Admin::ProductsController < Admin::AdminController
       .per Settings.product_per_page
       render :index      
     end
+    flash[:danger] = "No result"
   end
 
   private

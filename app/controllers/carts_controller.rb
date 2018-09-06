@@ -10,6 +10,7 @@ class CartsController < ApplicationController
     else
       session[:cart][@product.id.to_s] = Settings.cart.add_cart
     end
+    flash[:success] = "This product was add to cart"
     redirect_to carts_path
   end
 
@@ -24,11 +25,13 @@ class CartsController < ApplicationController
 
   def remove_product
     session[:cart].delete(@product.id.to_s) if session[:cart].key? @product.id.to_s
+    flash[:danger] = "Delete product from cart success"
     redirect_to carts_path
   end
 
   def remove_cart
     session[:cart] = {}
+    flash[:danger] = "Your cart was free, pls add more prodcuts"
     redirect_to root_path
   end
 

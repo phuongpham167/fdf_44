@@ -29,6 +29,7 @@ class Admin::UsersController < Admin::AdminController
       @users = @users.page(params[:page]).per Settings.user.per_page
       render :index
     end
+    flash[:danger] = "No result"
   end
   
   private

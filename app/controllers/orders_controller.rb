@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
         @products_in_cart = Product.load_product session[:cart].keys
       end
     else
-      flash[:danger] = "Pls Login"
+      flash[:danger] = "Pls Login before order"
       redirect_to root_path
     end
   end
