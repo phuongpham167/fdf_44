@@ -14,7 +14,7 @@ class Admin::ProductTempsController < Admin::AdminController
       flash[:success] = "This status suggest was update successfully"
       redirect_to request.referrer
     else
-      flash[:fail] = "Update fail pls try again"
+      flash[:fail] = "Update fail pls try againnnn"
       flash[:error] = t ".error"
     end
   end
