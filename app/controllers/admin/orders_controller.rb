@@ -9,8 +9,10 @@ class Admin::OrdersController < Admin::AdminController
 
   def update
     if @order.update_attributes(order_params)
+      flash[:success] = "This status order was update successfully"
       redirect_to request.referrer
     else
+      flash[:fail] = "Update fail pls try again"
       render :edit
     end
   end

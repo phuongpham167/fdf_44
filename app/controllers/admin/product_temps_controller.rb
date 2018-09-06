@@ -11,8 +11,10 @@ class Admin::ProductTempsController < Admin::AdminController
 
   def update
     if @product_temp.update_attributes(suggest_params)
+      flash[:success] = "This status suggest was update successfully"
       redirect_to request.referrer
     else
+      flash[:fail] = "Update fail pls try again"
       flash[:error] = t ".error"
     end
   end

@@ -31,6 +31,7 @@ class Admin::CategoriesController < Admin::AdminController
       flash[:success] = t "success"
       redirect_to admin_category_path
     else
+      flash[:fail] = "Update failed"
       render :edit
     end
   end
@@ -57,6 +58,7 @@ class Admin::CategoriesController < Admin::AdminController
       .page(params[:page]).per Settings.user.per_page
       render :index      
     end
+    flash[:danger] = "No result"
   end
 
   private
