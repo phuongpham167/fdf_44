@@ -10,6 +10,14 @@
       </li>
     </ul>
     <div class="collapse navbar-collapse text-center justify-content-end" id="navbarSecondarySupportedContent">
+      <ul class="nav">
+        <li class="nav-item">
+          <%= link_to "English", set_language_english_path, class: "nav-link nav-item" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Tiếng việt", set_language_vietnam_path, class: "nav-link nav-item" %>
+        </li>
+      </ul>
       <div>
         <span class="nav-link nav-item" style="color: red">
           <% if !session[:cart].nil? %>

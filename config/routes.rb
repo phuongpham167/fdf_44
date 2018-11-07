@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  post '/rate' => 'rater#create', :as => 'rate'
+  get "set_language/english"
+
+  get "set_language/vietnam"
+
+  post "/rate" => "rater#create", :as => "rate"
   devise_for :users,
     controllers:{omniauth_callbacks: "users/omniauth_callbacks"}
   get "/contact", to: "static_pages#contact"

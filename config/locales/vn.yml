@@ -1,0 +1,261 @@
+vn:
+  admin:
+    categories:
+      create:
+        success: "Tạo thành công"
+        fail: "Tạo không thành công, đã có lỗi vui lòng thử lại"
+      destroy:
+        success: "Xóa thành công"
+        danger: "Xóa không thành công, vui lòng thử lại"
+        warning: "Không thể xóa category này"
+      form:
+        submit: "Hoàn tất"
+      edit:
+        title: "Sửa danh mục"
+      index:
+        categories: "Danh mục"
+        new: "Thêm danh mục"
+        product: "Sản phẩm"
+        price: "Giá"
+        edit: "Sửa"
+        delete: "Xóa"
+        confirm: "Bạn có chắc muốn xoá không?"
+      load_category:
+        danger: "Không tìm thấy danh mục"
+      new:
+        new_category: "Thêm danh mục"
+      update:
+        success: "Cập nhập thành công thông tin"
+      show:
+        confirm: "Bạn có chắc chắn không?"
+        describe_title: "Mô tả chi tiết: "
+        describe_content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        edit: "Sửa danh mục này"
+        delete: "Xóa danh mục này"
+        product_of: "Sản phẩm của"
+        name: "Tên"
+        price: "Giá"
+    danger: "Phần này chỉ dành cho admin"
+    users:
+      success: "Tạo thành công"
+      danger: "Tạo thất bại"
+      form:
+        create: "Tạo mới"
+      index:
+        new_user: "Thêm mới người dùng?"
+        all_users: "Tất cả người dùng"
+        name: "Tên"
+        email: "Email"
+        role: "Quyền"
+        admin: "Quản lí"
+        user: "Người dùng"
+      new:
+        new: "Thêm mới người dùng"
+    load_user:
+      danger: "Không tìm thấy user"
+    products:
+      create:
+        success: "Thêm sản phẩm thành công"
+        error: "Thêm không thành công"
+      edit:
+        describes: "Sửa sản phẩm"
+      form:
+        name: "Tên sản phẩm"
+        describe: "Mô tả"
+        price: "Giá"
+        submit: "Hoàn tất"
+      delete:
+        success: "Xóa thành công"
+        danger: "Xóa không thành công. Vui lòng thử lại"
+      index:
+        describes: "Tất cả sản phẩm"
+        new: "Thêm mới sản phẩm"
+      new:
+        describes: "Thêm mới sản phẩm"
+      update:
+        success: "Cập nhật thành công"
+        danger: "Cập nhật không thành công"
+      load_product:
+        danger: "Không tìm thấy sản phẩm"
+      product:
+        read_more: "Chi tiết"
+        edit: "Sửa"
+        delete: "Xóa"
+        confirm: "Bạn có chắc muốn xóa không?"
+        rating: "Đánh giá"
+        star: "/5"
+    product_temps:
+      update:
+        error: "Cập nhật không thành công"
+      index:
+        name: "Tên"
+        price: "Giá"
+        descriptions: "Miêu tả"
+        status: "Trạng thái"
+        edit: "Sửa"
+  carts:
+    load_product_in_cart:
+      danger: "Hãy chọn thêm sản phẩm vào giỏ hàng"
+    index:
+      product: "Sản phẩm"
+      image: "Ảnh"
+      price: "Giá"
+      quantity: "Tổng số sản phẩm"
+      subtotal: "Số lượng"
+      remove: "Xóa"
+      continue: "Thêm sản phẩm"
+      total: "Tổng tiền"
+      order: "Đặt hàng"
+      add: "+"
+      delete: "-"
+      order: "Đặt hàng"
+  money: "₫"
+  layouts:
+    application:
+      name_app: "TastyBunny"
+    admin:
+      name_app: "TastyBunny"
+    admin_header:
+      name_app: "TastyBunny"
+      contact: "Liên lạc"
+      log_out: "Đăng xuất"
+      search: "Tìm kiếm"
+      users: "Tất cả người dùng"
+      categories: "Tất cả danh mục"
+    header:
+      about: "Thông tin"
+      contact: "Liên lạc"
+      name_app: "TastyBunny"
+      log_out: "Đăng xuất"
+      search: "Tìm kiếm"
+      manage: "Quản lí"
+      cart: "Giỏ hàng"
+    footer:
+      about: "Về chúng tôi"
+      address: "Ha Noi, Viet Nam"
+      contact: "Liên lạc"
+      coppy: "© Copyright 2017 Pingendo - All rights reserved."
+      home: "Trang chủ"
+      label: "Gửi thư mới cho chúng tôi"
+      mail: "pham.thi.thu.phuong@framgia.com"
+      map: "Bản đồ"
+      name_app: "TastyBunny"
+      name_store: "Cửa hàng đồ ăn"
+      phone: "01695779469"
+      place_holder: "Điền Email"
+      services: "Our services"
+      story: "Stories"
+      subcribe: "Subcribe"
+      submit: "Submit"
+  static_pages:
+    home:
+      comment1: "Đây là một quán bán đồ ăn tuyệt vời"
+      des_peo1: "Senior developer"
+      des_peo2: "UI designer"
+      des_peo3: "Boss"
+      email: "Email"
+      foget: "Forgot Password?"
+      hello: "Hello you"
+      lead: "We grow together with the community"
+      login: "Log in"
+      login_with_fb: "Login with facebook"
+      password: "Password"
+      password_cf: "Password confirm"
+      peo1: "Meow"
+      peo2: "J. L. Fish"
+      peo3: "Carlito"
+      quotes: "Food should be blank as hell, strong as death and sweet as love"
+      remember: "Remember Me"
+      review: "Review"
+      signup: "Sign up"
+      slogan: "Simply Tasty, Simply Better"
+    contact:
+      contact_us: "Contact us"
+      email: "Email address"
+      enter_ameil: "Enter Email"
+      input_email: "InputEmail"
+      input_name: "InputName"
+      name: "Your name"
+      quotes: "We would love to hear from you"
+      submit: "Submit"
+      type_here: "Type here"
+      write: "Write here"
+      your_email: "Your Email"
+      your_name: "Your Name"
+  products:
+    product:
+      new: "Mới"
+      cart: "Giỏ hàng"
+      favourite: "Yêu thích"
+      rating: "Đánh giá: "
+      read_more: "Chi tiết"
+      no_descriptions: "Không có miêu tả gì"
+    index:
+      go: "Lọc"
+      min_price: "Giá nhỏ nhất"
+      max_price: "Giá cao nhất"
+      suggest: "Gợi ý sản phẩm mới"
+  shared:
+    form_login:
+      login: "Đăng nhập"
+      signup: "Đăng kí"
+      slogan: "Simply Tasty, Simply Better"
+      quotes: "Food should be blank as hell, strong as death and sweet as love"
+      login_with_fb: "Đăng nhập bằng facebook"
+    form_search:
+      light: "Tìm kiếm"
+      search: "Bạn muốn tìm món gì ?"
+    form_suggest:
+      submit: "Tạo"
+  users:
+    show:
+      edit: "Sửa"
+    form:
+      title: "Sửa thông tin cá nhân"
+      submit: "Hoàn tất"
+    form_search:
+      light: "Tìm kiếm"
+      search: "Bạn muốn tìm gì ?"
+  orders:
+    get_status_name:
+      inprogess: "Đơn hàng đang được xử lí"
+      resolved: "Đơn hàng đã giao"
+      new_order: "Đơn hàng vừa tạo"
+    new:
+      danger: "Hãy chọn sản phẩm"
+      bill: "Hóa đơn"
+      name: "Tên"
+      quantity: "Tổng số sản phẩm"
+      subtotal: "Số lượng"
+      back_to_cart: "Giỏ hàng"
+      total_money: "Tổng tiền"
+    create:
+      success: "Đặt hàng thành công"
+    form:
+      submit: "Hoàn tất"
+    index:
+      manage: "Quản lí tất cả đơn hàng"
+      ordercode: "Mã đơn hàng"
+      order_date: "Ngày đặt hàng"
+      order_status: "Trạng thái"
+      order_address: "Địa chỉ"
+      detail: "Chi tiết"
+    show:
+      user: "Người dùng: "
+      phone: "Số điện thoại: "
+      address: "Địa chỉ: "
+      stutus_of_order: "Mã đơn hàng: "
+      products: "Các sản phẩm"
+      product: "Sản phẩm"
+      quantity: "Tổng số lượng"
+      price: "Giá"
+  product_temps:
+    create:
+      danger: "Tạo khong thành công"
+      success: "Gợi ý thành công đang chờ admin duyệt"
+    index:
+      name: "Tên"
+      price: "Giá"
+      descriptions: "Mô tả"
+      status: "Trạng thái"
+
